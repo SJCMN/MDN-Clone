@@ -23,5 +23,5 @@ Adding functionality to add contacts to phone book array.
 Generate a set of squares that will fit witin a given number.
 Prints to <code> section </code> element.
 
-<strong>Launch Countdownv
+<strong>Launch Countdown</strong>
 Prints number sequence to page.
