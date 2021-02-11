@@ -1,5 +1,5 @@
 # MDN-Clone
-JS DOM Practice with loops and Arrays
+<h3>JS DOM Practice with loops and Arrays</h3>
 
 Code pushed to GitHub with command line.
 Opens with live server from VS Code to local port 5500.
