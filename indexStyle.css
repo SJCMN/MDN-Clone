@@ -1,0 +1,118 @@
+html {
+    background-color: #fff;
+    box-sizing: border-box;
+    color: #212121;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.pageWrapper {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.header {
+    grid-row: 1/2;
+    height: 200px;
+}
+
+h1, h2, main {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.2;
+    letter-spacing: .003rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+main {  
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-row: 3/5;
+    padding: 10px 10px;
+}
+
+.headerContainer {
+    display: grid;
+    grid-row: 2/3;
+    background-color: #eee;
+    border-top: 1px solid #cdd5d7;
+    border-bottom: 1px solid #cdd5d7;
+    padding: 24px;      
+}
+
+.sideBar {
+    background-color: neutral-600;
+}
+
+article {
+    max-width: 75ch;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+code {
+    background-color: #eee;
+    padding: 0 3px;
+}
+
+button {
+    background-color: #1e7f9d;
+    border-color: #1e7f9d46;
+    border-radius: 3px;
+    cursor: crosshair;
+    font-weight: 600;
+    height: 30px;
+    color: #eee;
+    letter-spacing: .05rem;
+}
+
+button:hover, button:active {
+    background-color: #359ab9;
+    border-color: #1e7f9d46;
+}
+
+button:focus {
+    transform: scale(1.005);
+    border-color: #1e7f9d46;
+}
+
+.formBasic {
+    background-color: #faefca;
+    padding: 20px 20px;
+    border-radius: 4px;
+}
+
+.formFields {
+    padding: 5px;
+}
+
+.launchPad {
+    height: 570px;
+    background-color: #f5f9fa;
+}
+
+.lowerAside {
+    grid-row: 5/6;
+    height: 50px;
+    background-color: #eee;
+}
+
+footer {
+    background-color: #212121;
+    grid-row: 6/7;
+    padding: 48px 24px;
+    height: 400px;
+}

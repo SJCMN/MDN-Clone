@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Working Arrays</title>
+        <link rel="stylesheet" href="indexStyle.css">
+
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="pageWrapper">
+            <div class="header">
+            </div>
+        <div>
+            <h1 class="headerContainer">Working with Arrays</h1>
+        </div>
+        <main>
+            <div id = "sideBar" class = "sideBar">
+                <aside>
+                </aside>
+            </div>
+            <article>
+                <h2 class="subHeaderContainer">Exiting Loops with a Break</h1>
+                        <div>
+                            <p>
+                                If you want to exit a loop before all the iterations have been completed, you can use the break statement.
+                                We already met this in the previous article when we looked at switch statements — when a case is met in 
+                                a switch statement that matches the input expression, the break statement immediately exits the switch 
+                                statement and moves on to the code after it.
+                            </p>
+
+                            <p>
+                                It's the same with loops — a break statement will immediately exit the loop and make the browser move on 
+                                to any code that follows it.
+                            </p>
+                                
+                            <p>
+                                Say we wanted to search through an array of contacts and telephone numbers and return just the number we 
+                                wanted to find? First, some simple HTML.
+                            </p>
+                            <div class="formBasic">
+                                <label for="search">Search by contact name:</label>
+                                <input id="search" type="text">
+                                <button id="searchBtn">Search</button>
+                                <p class="phoneSearch" id="phoneSearch"></p>
+                            </div>
+                        </div>
+                    <h2 class="subHeaderContainer">Loops 1</h1>
+                        <div>
+                            <p>
+                                In our first looping task we want you start by creating a simple <code>for()</code>loop that goes through all the items 
+                                in the provided <code>myArray</code> and prints them out on the screen inside list items (i.e., <code>list</code> elements), which 
+                                are appended to the provided <code>list</code>.
+                            </p>
+                            <div class="formBasic">
+                                <button id="listBtn">Show the List</button>
+                                <section class="preview">
+                                </section>
+                            </div>
+                        </div>
+                <h2 class="subHeaderContainer">Loops 2</h1>
+                        <div>
+                            <p>
+                                In this next task, we want you to write a simple program that, given a name, searches an array of objects containing names and phone 
+                                numbers (<code>phonebook</code>) and, if it finds the name, outputs the name and phone number into the paragraph (<code>para</code>) and then exits the loop 
+                                before it has run its course. 
+                                </p>
+                            <p>
+                                You are given three variables to begin with:
+                                </p>
+                            <ul>
+                                <li>
+                                    <code>i</code> — starts off with a value of 0; intended to be used as an iterator.
+                                </li>
+                                <li>
+                                    <code>name</code> — contains a name to search for
+                                </li>
+                                <li>
+                                    <code>para</code>— contains a reference to a paragraph, which will be used to report the results.
+                                </li>
+                            </ul>
+                            <p>
+                                You should use a type of loop that you've not used in the previous task.
+                                </p>
+                            <div class="formBasic">
+                                <div class="formFields">
+                                    <label for="phoneName">Name</label>
+                                    <input id="phoneName" type="text">
+                                    <label for="phoneNumber" type="number">Number</label>
+                                    <input id="phoneNumber" type="text">
+                                    <button id="addPhoneContact">Add to Phonebook</button>
+                                </div>
+                                <div class="formFields">
+                                    <label for="phoneSearch">Phone Book Look Up</label>
+                                    <input id="phoneBookSearch" type="text">    
+                                    <button id="phoneBookBtn">Phone Book Search</button>
+                                    <section id=phoneSection class="phoneSection">
+                                </div>
+                            </div>
+                            <section>
+
+                            </section>
+                        </div>
+                <h2 class="subHeaderContainer">Skipping iterations with continue</h2>
+                        <div>
+                            <p>
+                                The continue statement works in a similar manner to break, but instead of breaking out of the loop entirely, 
+                                it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, 
+                                and returns only the numbers that are squares of integers (whole numbers).
+                            </p>
+                                
+                            <p>
+                                The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The 
+                                JavaScript is mostly the same too, although the loop itself is a bit different:
+                            </p>
+                            <div class="formBasic">
+                                <label for="number">Enter a number: </label>
+                                <input id="number" type="text">
+                                <button id="numBtn">Generate Integer Squares</button>
+                                <p class="genNumSeq" id="genNumSeq">Output: </p>
+                            </div>
+                        </div>
+                <h2 class="subHeaderContainer">Active learning: Launch ountdown!</h2>
+                        <div>
+                            <p>
+                                In this exercise, we want you to print out a simple launch countdown to the output box, from 10 down to Blastoff. Specifically, we want you to:
+                            </p>
+                            <ul>
+                                <li>
+                                    Loop from 10 down to 0. We've provided you with an initializer — <code>let i = 10;</code>.
+                                </li>
+                                <li>
+                                    For each iteration, create a new paragraph and append it to the output <<code>div</code>>, 
+                                    which we've selected using <code>const output = 
+                                    document.querySelector('.output');</code>. 
+                                    In comments, we've provided you with three code 
+                                    lines that need to be used somewhere inside the loop:
+                                    <ul>
+                                        <li>
+                                            <code>const para = document.createElement('p');</code> — creates a 
+                                            new paragraph.
+                                        </li>
+                                        <li>
+                                            <code>output.appendChild(para);</code>— appends the paragraph to 
+                                            the output <code>div></code>.
+                                        </li>
+                                        <li>
+                                            <code>para.textContent =</code> — makes the text inside the paragraph 
+                                            equal to whatever you put on the right-hand side, after the equals sign.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    Different iteration numbers require different text to be put in the paragraph for that 
+                                    iteration (you'll need a conditional statement and multiple <code>para.textContent</code> = lines):
+                                    <ul>
+                                        <li>
+                                            If the number is 10, print "Countdown 10" to the paragraph.
+                                        </li>
+                                        <li>
+                                            If the number is 0, print "Blast off!" to the paragraph.
+                                        </li>
+                                        <li>
+                                            For any other number, print just the number to the paragraph.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    Remember to include an iterator! However, in this example we are counting down after 
+                                    each iteration, not up, so you don't want <code>i++</code> — how do you iterate downwards?
+                                </li>
+                            </ul>
+                            <div class="launchPad">
+                                <button id="launchBtn">Launch Countdown!</button>
+                                <div class="output">
+                                    <p class="launchCount" id="launchCount">Output:</p>
+                                </div>
+                            </div>
+                        </div>
+            </article>
+            <div id = "sideBar" class = "sideBar">
+            </div>
+        </main>
+        <aside class="lowerAside">
+
+        </aside>
+        <footer>
+            <div>
+                <p>
+                    This stuff is in the footer
+                </p>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>
+
+<script src="indexScript.js"></script>
